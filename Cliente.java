@@ -71,7 +71,35 @@ public class Atendente {
         // lógica de atendimento ao pedido
     }
 }
-
+public void preencherDadosdoPedido() {
+    
+	  Scanner scEntrada = new Scanner(System.in);
+	  
+	  System.out.println("Digite o nome do cliente: ");	     
+	  this.nome = scEntrada.nextLine();
+	      
+	  System.out.println("Digite o e-mail do cliente: ");	     
+	  this.email = scEntrada.nextLine();
+	     
+	  System.out.println("Digite o ID do pedido: ");	     
+	  this.id = scEntrada.nextInt();
+	     
+	  scEntrada.nextLine(); 
+	     
+	  System.out.println("Digite o endereço do cliente: ");	     
+	  this.endereco = scEntrada.nextLine();
+	     
+	  System.out.println("Digite o telefone do cliente: ");	     
+	  this.telefone = scEntrada.nextLine();
+	     
+	  scEntrada.close(); 
+}
+public void exibirDados() {
+    System.out.println("Nome: " + this.nome);
+    System.out.println("E-mail: " + this.email);
+    System.out.println("Endereço: " + this.endereco);
+    System.out.println("Telefone: " + this.telefone);
+}
 public class SistemaDeAjudaAoCliente {
     public static void main(String[] args) {
         // Criação do cliente
